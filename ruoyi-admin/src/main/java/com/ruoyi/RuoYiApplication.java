@@ -14,6 +14,9 @@ public class RuoYiApplication
 {
     public static void main(String[] args)
     {
+        // ✅ 设置系统属性，完全禁用 Quartz 自动配置
+        System.setProperty("spring.autoconfigure.exclude",
+                "org.springframework.boot.autoconfigure.quartz.QuartzAutoConfiguration");
         // System.setProperty("spring.devtools.restart.enabled", "false");
         SpringApplication.run(RuoYiApplication.class, args);
         System.out.println("(♥◠‿◠)ﾉﾞ  若依启动成功   ლ(´ڡ`ლ)ﾞ  \n" +
